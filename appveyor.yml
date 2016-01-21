@@ -7,11 +7,13 @@ version: 1.0.{build}
 environment:
   secret-github-user:
     secure: z3TsP5/PRDg4wIedgeRAtR8edLoACEuSmbToUTXzcf4=
+
   secret-github-password:
     secure: Fu6p8pFA2CEmOLfszUJf3ayF3dL9DsorBluoiQKJUNkpCcAlxlubScpvGDgxFAyH
+
   secret-nuget-api:
     secure: ANJVg76+ZG8oux3kZiS8MazTByIDILozxNJfQGa0zD3+1+jXaPN152mDu4JFyuka
-	
+
 build_script:
 - cmd: "build.cmd Build"
 
@@ -19,7 +21,7 @@ deploy:
 - provider: Local
   on:
     branch: master
-	
+
 before_deploy:
 - cmd: >-
     setx NugetKey = %secret-nuget-api%

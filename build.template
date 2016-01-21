@@ -82,17 +82,18 @@ let release = LoadReleaseNotes "RELEASE_NOTES.md"
 
 let describeTag repositoryDir =
     let _,tagHash,errorHash = runGitCommand repositoryDir "rev-list --tags --max-count=1"
-    if errorHash <> "" then failwithf "git rev-list failed: %s" errorHash
-
-    let _,msg,error = runGitCommand repositoryDir <| sprintf "describe --tags %s" (tagHash |> Seq.head)
-    if error <> "" then failwithf "git describe failed: %s" error
-    msg |> Seq.head
+    if Seq.length tagHash = 1
+        then
+            let _,msg,error = runGitCommand repositoryDir <| sprintf "describe --tags %s" (tagHash |> Seq.head)
+            if error <> "" then failwithf "git describe failed: %s" error
+            msg |> Seq.head |> Some
+    else None
 
 let currentVersionIsAlreadyReleased =
-    let optGetLastTags = (describeTag "").Split('-') |> Seq.ofArray
-    match optGetLastTags |> Seq.tryHead with
+    let optGetLastTags = (describeTag "")
+    let splited = optGetLastTags |> Option.map (fun t -> t.Split('-')) |> Option.toList |> Seq.concat
+    match splited |> Seq.tryHead with
     | Some lastTag ->
-        printfn "%A and version is %A with all tags %A" lastTag release.NugetVersion optGetLastTags
         lastTag = release.NugetVersion
     | None -> false
     

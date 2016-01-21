@@ -23,18 +23,9 @@ deploy:
   on:
     branch: master
 
-before_deploy:
-- cmd: >-
-    @ECHO OFF
-    
-    SETX -m NugetKey %secret-nuget-api%
-    
-    SETX -m github-user %secret-github-user%
-    
-    SETX -m github-pw %secret-github-password%
 after_deploy:
 - ps: >-
-    $p = Start-Process -FilePath "./build.cmd" -ArgumentList "Release" -Wait -PassThru
+    $p = Start-Process -FilePath "./build.cmd" -ArgumentList "Release","NugetKey=$Env:secret-nuget-api","github-user=$Env:secret-github-user","github-pw=$Env:secret-github-password" -Wait -PassThru
     
     Exit $p.ExitCode
     

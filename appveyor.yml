@@ -25,7 +25,7 @@ deploy:
 
 after_deploy:
 - ps: >-
-    $p = Start-Process -FilePath "./build.cmd" -ArgumentList "Release","NugetKey=$Env:secret-nuget-api","github-user=$Env:secret-github-user","github-pw=$Env:secret-github-password" -Wait -PassThru
+    $p = Start-Process -FilePath "./build.cmd" -ArgumentList 'Release','NugetKey=$Env:secret-nuget-api','github-user=$Env:secret-github-user','github-pw=$Env:secret-github-password' -Wait -PassThru
     
     Exit $p.ExitCode
     

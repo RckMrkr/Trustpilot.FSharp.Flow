@@ -6,7 +6,7 @@ NUGET
   specs:
     FAKE (4.14.9)
     FSharp.Compiler.Service (1.4.2.3)
-    FSharp.Formatting (2.13.2)
+    FSharp.Formatting (2.13.4)
       FSharp.Compiler.Service (>= 1.4.2 < 1.5.0)
       FSharpVSPowerTools.Core (>= 2.2.0 < 2.3.0)
     FSharpVSPowerTools.Core (2.2.0)
@@ -23,7 +23,7 @@ NUGET
 GITHUB
   remote: fsharp/FAKE
   specs:
-    modules/Octokit/Octokit.fsx (7f9a42025fdd0786f3137d70f261f3f0c7a40d1c)
+    modules/Octokit/Octokit.fsx (d52c9be986bb0939b76102074f4720ebe2ffc6ea)
       Octokit
 GROUP Test
 NUGET

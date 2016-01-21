@@ -11,17 +11,17 @@
 // (This is the original behaviour of ProjectScaffold prior to multi project support)
 let referenceBinaries = []
 // Web site location for the generated documentation
-let website = "/##ProjectName##"
+let website = "/Trustpilot.FSharp.Flow"
 
-let githubLink = "http://github.com/##GitHome##/##GitName##"
+let githubLink = "http://github.com/Trustpilot/Trustpilot.FSharp.Flow"
 
 // Specify more information about your project
 let info =
-  [ "project-name", "##ProjectName##"
-    "project-author", "##Author##"
-    "project-summary", "##Summary##"
+  [ "project-name", "Trustpilot.FSharp.Flow"
+    "project-author", "Trustpilot"
+    "project-summary", "A library for building contract based execution flows"
     "project-github", githubLink
-    "project-nuget", "http://nuget.org/packages/##ProjectName##" ]
+    "project-nuget", "http://nuget.org/packages/Trustpilot.FSharp.Flow" ]
 
 // --------------------------------------------------------------------------------------
 // For typical project, no changes are needed below

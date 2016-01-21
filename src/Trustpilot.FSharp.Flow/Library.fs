@@ -1,4 +1,4 @@
-﻿namespace FSharp.ProjectTemplate
+namespace Trustpilot.FSharp.Flow
 
 /// Documentation for my library
 ///

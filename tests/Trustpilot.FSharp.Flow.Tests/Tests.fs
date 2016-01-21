@@ -1,6 +1,6 @@
-﻿module FSharp.ProjectScaffold.Tests
+module Trustpilot.FSharp.Flow.Tests
 
-open FSharp.ProjectTemplate
+open Trustpilot.FSharp.Flow
 open NUnit.Framework
 
 [<Test>]

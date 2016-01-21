@@ -1,0 +1,23 @@
+type project
+owners
+    Trustpilot
+authors 
+    Trustpilot
+projectUrl
+    http://github.com/Trustpilot/Trustpilot.FSharp.Flow
+iconUrl
+    https://raw.githubusercontent.com/Trustpilot/Trustpilot.FSharp.Flow/master/docs/files/img/logo.png
+licenseUrl
+    http://github.com/Trustpilot/Trustpilot.FSharp.Flow/blob/master/LICENSE.txt
+requireLicenseAcceptance
+    false
+copyright
+    Copyright 2015
+tags
+    flow async api contract execution
+summary
+    A library for building contract based execution flows
+description
+    A library for building contract based execution flows, providing computational expression builder for the classic Async<Choice> where Choice is recrated as a Type called Result.
+
+

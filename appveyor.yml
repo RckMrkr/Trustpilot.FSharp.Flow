@@ -1,8 +1,9 @@
 init:
 # Uncomment to get the rdp login for the build agent
-# - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+#  - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
   - git config --global core.autocrlf input
   - git config --global push.default simple
+  
 version: 1.0.{build}
 environment:
   secret-github-user: test
@@ -23,16 +24,17 @@ before_deploy:
 - cmd: >-
     @ECHO OFF
     
-    SETX NugetKey %secret-nuget-api%
+    SETX -m NugetKey %secret-nuget-api%
     
-    SETX github-user %secret-github-user%
+    SETX -m github-user %secret-github-user%
     
-    SETX github-password %secret-github-password%
-
-
+    SETX -m github-pw %secret-github-password%
 after_deploy:
 - ps: >-
-    Start-Process -FilePath ./build.cmd -ArgumentList Release -Wait -NoNewWindow 
+    $p = Start-Process -FilePath "./build.cmd" -ArgumentList "Release" -Wait -PassThru
+    
+    $p.ExitCode
+    
 # uncomment to debug will stop the build server for 1 hour
-# on_finish:
-# - ps: $blockRdp = $true;
+#on_finish:
+#- cmd: pause

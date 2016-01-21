@@ -91,7 +91,7 @@ let describeTag repositoryDir =
 
 let currentVersionIsAlreadyReleased =
     let optGetLastTags = (describeTag "")
-    let splited = optGetLastTags |> Option.map (fun t -> t.Split('-')) |> Option.toList |> Seq.concat
+    let splited = optGetLastTags |> Option.toList
     match splited |> Seq.tryHead with
     | Some lastTag ->
         lastTag = release.NugetVersion

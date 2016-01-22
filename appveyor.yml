@@ -25,11 +25,11 @@ deploy:
 
 after_deploy:
 - ps: >-
-    $p = Start-Process -FilePath "./build.cmd" -ArgumentList ("Release","NugetKey=$Env:SecretNugetApiKey","github-user=$Env:SecretGithubUser","github-pw=$Env:SecretGithubPassword") -Wait -PassThru
+    Start-Process -FilePath "./build.cmd" -ArgumentList ("Release","NugetKey=$Env:SecretNugetApiKey","github-user=$Env:SecretGithubUser","github-pw=$Env:SecretGithubPassword") -Wait -PassThru
     
-    $p.ExitCode
+    $LastExitCode
     
-    Exit $p.ExitCode
+    Exit $LastExitCode
     
 # uncomment to debug will stop the build server for 1 hour
 #on_finish:

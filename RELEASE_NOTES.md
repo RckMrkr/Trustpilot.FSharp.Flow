@@ -1,3 +1,6 @@
+### 0.0.3 - Last Actual Final Project Setup
+* Project is ready
+
 ### 0.0.2-delta - Actual Final Project Setup
 * Project is ready
 

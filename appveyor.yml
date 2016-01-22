@@ -32,5 +32,5 @@ after_deploy:
     Exit $LastExitCode
     
 # uncomment to debug will stop the build server for 1 hour
-#on_finish:
-#- cmd: pause
+on_finish:
+- cmd: pause

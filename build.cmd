@@ -16,7 +16,3 @@ IF NOT EXIST build.fsx (
   packages\build\FAKE\tools\FAKE.exe init.fsx
 )
 packages\build\FAKE\tools\FAKE.exe build.fsx %*
-
-if %1 == "Release" (
-  pause
-)

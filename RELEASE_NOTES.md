@@ -1,4 +1,4 @@
-### 0.0.1-delta - Actual Final Project Setup
+### 0.0.2-delta - Actual Final Project Setup
 * Project is ready
 
 ### 0.0.1-tango - Actual Final Project Setup

@@ -24,7 +24,7 @@ deploy:
     branch: master
 
 after_deploy:
-- cmd: build.cmd "Release" "NugetKey=%SecretNugetApiKey%" "github-user=%SecretGithubUser%" "github-pw=%SecretGithubPassword%"
+- ps: Start-Process -FilePath "./build.cmd" -ArgumentList ("Release","NugetKey=$Env:SecretNugetApiKey","github-user=$Env:SecretGithubUser","github-pw=$Env:SecretGithubPassword") -Wait -PassThru
 
 # uncomment to debug will stop the build server for 1 hour
 #on_finish:

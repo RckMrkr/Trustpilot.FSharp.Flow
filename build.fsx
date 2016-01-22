@@ -94,6 +94,7 @@ let currentVersionIsAlreadyReleased =
     let splited = optGetLastTags |> Option.toList
     match splited |> Seq.tryHead with
     | Some lastTag ->
+        printfn "tag: %A, release: %A" lastTag release.NugetVersion
         lastTag = release.NugetVersion
     | None -> false
     

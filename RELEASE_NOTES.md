@@ -1,14 +1,2 @@
-### 0.0.3 - Last Actual Final Project Setup
-* Project is ready
-
-### 0.0.2-delta - Actual Final Project Setup
-* Project is ready
-
-### 0.0.1-tango - Actual Final Project Setup
-* Project is ready
-
-### 0.0.1-beta - Final Project Setup
-* Project is ready
-
-### 0.0.1-alpha - Initial Project Setup
-* Setup the project
+### 0.1 - Release of Flow package
+* Added Flow

@@ -62,7 +62,6 @@
     <None Include="paket.references" />
     <None Include="paket.template" />
     <Compile Include="Common.fs" />
-    <Compile Include="Result.fs" />
     <Compile Include="Flow.fs" />
     <Compile Include="AppFlow.fs" />
     <Compile Include="Execution.fs" />

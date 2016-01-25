@@ -35,8 +35,8 @@ module Logger =
         
         let fromException (exn : Exception) =
             let fromExcp (e : exn) = 
-                [ property "Message" e.Message
-                  property "StackTrace" e.StackTrace
+                [ property "Message" <| String.ofNull e.Message
+                  property "StackTrace" <| String.ofNull e.StackTrace
                   property "Full" e ]
             
             let getInner (e : Exception) =

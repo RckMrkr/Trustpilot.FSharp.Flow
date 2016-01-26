@@ -1,3 +1,6 @@
+### 0.4 - Moved Api library
+* Api library has been moved to Trustpilot.FSharp.Flow.Api
+
 ### 0.3 - Introducing RequestHandler
 * Added a request handler for Api library
 

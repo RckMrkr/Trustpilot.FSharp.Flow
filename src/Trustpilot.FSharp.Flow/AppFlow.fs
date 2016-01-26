@@ -2,7 +2,6 @@
 
 module AppFlow =
     open System
-    open Common
 
     type ApiResponseError<'a> =
         | ApiException of Exception * string
@@ -73,5 +72,4 @@ module AppFlow =
 
     let catchUnhandled<'r,'e> (fa : AppFlow<'r,'e>) : AppFlow<'r,'e> =
         fa
-        |> Flow.catch
-        |> Flow.mapFailure (Choice.merge2Of2 UnhandledError)
+        |> Flow.catchMap UnhandledError

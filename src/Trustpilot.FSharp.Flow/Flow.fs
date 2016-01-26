@@ -2,9 +2,11 @@
 
     type Result<'success, 'failure> = Success of 'success
                                     | Failure of 'failure
+
     type Flow<'a, 'e> = Async<Result<'a, 'e>>
 
     module Result =
+        open Common
 
         let mapFailure f =
             function
@@ -16,10 +18,8 @@
             | Success x -> Success <| f x
             | Failure x -> Failure x
 
-        let fromChoice =
-            function
-            | Choice1Of2 a -> Success a
-            | Choice2Of2 e -> Failure e
+        let fromChoice<'a,'e> : Choice<'a,'e> -> Result<'a,'e> =
+            Choice.choice Success Failure
 
     module Flow =
         open Common
@@ -81,7 +81,7 @@
         let catchMap (f : exn -> 'e) (ma : Flow<'a,'e>) : Flow<'a,'e> =
             ma
             |> catch
-            |> mapFailure (Choice.merge2Of2 f)
+            |> mapFailure (Choice.mergeSnd f)
 
         let startChild (ma : Flow<'r,'e>) : Flow<Flow<'r,'e>,'e> =
             async {

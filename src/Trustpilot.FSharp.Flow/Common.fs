@@ -108,17 +108,16 @@ module Common =
             }
     
     module Choice =
-        let merge1Of2 (f : 'a -> 'b) (c : Choice<'a,'b>) : 'b =
-            match c with
-            | Choice1Of2 a -> f a
-            | Choice2Of2 b -> b
 
-        let merge2Of2 (f : 'b -> 'a) (c : Choice<'a,'b>) : 'a =
-            match c with
-            | Choice1Of2 a -> a
-            | Choice2Of2 b -> f b
-                
         let choice (f1 : 'a -> 'c) (f2 : 'b -> 'c) (c : Choice<'a,'b>) : 'c =
             match c with
             | Choice1Of2 a -> f1 a
             | Choice2Of2 b -> f2 b
+
+        let mergeFst (f : 'a -> 'b) (c : Choice<'a,'b>) : 'b =
+            choice f id c
+
+        let mergeSnd (f : 'b -> 'a) (c : Choice<'a,'b>) : 'a =
+            choice id f c
+                
+        

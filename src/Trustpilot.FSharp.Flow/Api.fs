@@ -8,7 +8,6 @@ module Api =
     open Logger.Types
     open Logger.Property
     open System.Net
-    open Result
     open AppFlow
     open System.Net.Http
     open System

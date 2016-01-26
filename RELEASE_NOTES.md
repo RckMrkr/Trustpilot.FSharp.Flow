@@ -1,3 +1,6 @@
+### 0.2.2 - Changed System.Net.Http dependency
+* Set System.Net.Http dependency to >= 2.0.20710
+
 ### 0.2.1 - Set System.Net.Http reference
 * Set System.Net.Http reference to be >= 4
 

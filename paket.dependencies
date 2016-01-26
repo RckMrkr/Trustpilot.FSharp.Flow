@@ -1,7 +1,7 @@
 source https://nuget.org/api/v2
 
 nuget Newtonsoft.Json ~> 7
-nuget System.Net.Http ~> 4
+nuget System.Net.Http ~> 2.0.20710
 
 group Build
   source https://nuget.org/api/v2

@@ -1,3 +1,6 @@
+### 0.3 - Introducing RequestHandler
+* Added a request handler for Api library
+
 ### 0.2.2 - Changed System.Net.Http dependency
 * Set System.Net.Http dependency to >= 2.0.20710
 

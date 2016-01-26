@@ -30,6 +30,12 @@ module Api =
                       property "Message"        this.Response.Message
                       property "ErrorCode"      this.Response.ErrorCode
                       property "CorrelationId"  this.Response.CorrelationId ] 
+
+    type RequestHandler<'request, 'result, 'response,'error> =
+        { Service         : 'request -> AppFlow<'result,'error>
+          ResponseHandler : 'result -> 'response
+          ErrorHandler    : 'error -> ApiErrorResponse
+        }
     
     let asHttpError httpCode apiError =
         let response = new HttpResponseMessage(httpCode)
@@ -59,8 +65,11 @@ module Api =
         | Success s -> s
         | Failure f -> raiseResponse <| asHttpError f.HttpCode f.Response
 
-    let inline run logger (exe : ExecutionFlow<_,_,_>)  =
-        exe
+    let inline run logger request (handler : RequestHandler<_,_,_,_>) =
+        handler.Service
+        >> Flow.map handler.ResponseHandler
+        >> AppFlow.mapFailure handler.ErrorHandler
+        |> Execution.asExecutionFlow request
         |> Execution.onFailure (logger << App.executionAppToProperties)
         |> Execution.asAppFlow
         |> Flow.mapFailure combineAppErrors

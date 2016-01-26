@@ -1,2 +1,7 @@
+### 0.2 - Simplification and Restructuring
+* Moved result and flow into the Trustpilot.FSharp namespace
+* Added Flow.catchMap
+* Added fromApiFlow and fromStoreFlow to AppFlow
+
 ### 0.1 - Release of Flow package
 * Added Flow

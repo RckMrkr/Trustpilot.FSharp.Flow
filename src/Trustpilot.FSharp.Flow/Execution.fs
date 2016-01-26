@@ -2,8 +2,6 @@
 
 module Execution =   
     open Common
-    open Result
-    open Flow
     open AppFlow
 
     type Execution<'input, 'output> =

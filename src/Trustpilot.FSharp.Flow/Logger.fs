@@ -31,7 +31,7 @@ module Logger =
 
         let fromTuple (n,v) = { Name = n; Value = v}
         
-        let prefixName s (p : Property) = { p with Name = sprintf "%s%s" s p.Name}
+        let prefixGroupName s (p : Property) = { p with Name = sprintf "%s.%s" s p.Name}
         
         let fromException (exn : Exception) =
             let fromExcp (e : exn) = 
@@ -44,10 +44,10 @@ module Logger =
                 |> Option.toList
                 |> List.map fromExcp
                 |> List.concat
-                |> List.map (prefixName "Inner.")
+                |> List.map (prefixGroupName "Inner")
 
             (fromExcp exn @ getInner exn)
-            |> List.map (prefixName "Exception.")    
+            |> List.map (prefixGroupName "Exception")    
 
         let unique (ps : List<Property>) =
             List.filter (not << String.IsNullOrWhiteSpace << value) ps
@@ -83,23 +83,23 @@ module Logger =
             | StoreError (e,s) -> 
                 Property.fromException e 
                 @ [Property.property "Message" s]
-                |> List.map (Property.prefixName "StoreError")
+                |> List.map (Property.prefixGroupName "StoreError")
             | RequestError (e, s) -> 
                 Property.fromException e 
                 @ [Property.property "Message" s]
-                |> List.map (Property.prefixName "RequestError")
+                |> List.map (Property.prefixGroupName "RequestError")
             | UnhandledError e ->
                 Property.fromException e 
-                |> List.map (Property.prefixName "UnhandledError")
+                |> List.map (Property.prefixGroupName "UnhandledError")
             | BusinessError e ->
                 Property.properties e
-                |> List.map (Property.prefixName "BusinessError")
+                |> List.map (Property.prefixGroupName "BusinessError")
 
         let inline executionAppToProperties (e : Execution<#IConvertToProperties,AppError<#IConvertToProperties>>) : List<Property> =
             let response = appErrorToProperties e.Output
-                           |> List.map (Property.prefixName "Output")
+                           |> List.map (Property.prefixGroupName "Output")
             let request = Property.properties e.Input
-                          |> List.map (Property.prefixName "Input")
+                          |> List.map (Property.prefixGroupName "Input")
             let stats = [ Property.property "RunTimeMS" e.RunningTime.TotalMilliseconds ]
-                        |> List.map (Property.prefixName "Stats")
+                        |> List.map (Property.prefixGroupName "Stats")
             request @ response @ stats

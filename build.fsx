@@ -32,11 +32,11 @@ let project = "Trustpilot.FSharp.Flow"
 
 // Short summary of the project
 // (used as description in AssemblyInfo and as a short summary for NuGet package)
-let summary = "A library for building contract based execution flows"
+let summary = "A library for building explicit execution flows"
 
 // Longer description of the project
 // (used as a description for NuGet package; line breaks are automatically cleaned up)
-let description = "A library for building contract based execution flows, providing computational expression builder for the classic Async<Choice> where Choice is recrated as a Type called Result."
+let description = "A library for building explicit execution flows, providing computational expression builder for the classic Async<Choice> where Choice is recrated as a Type called Result."
 
 // List of author names (for NuGet package)
 let authors = [ "Trustpilot" ]

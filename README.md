@@ -2,7 +2,7 @@
 [![Issue Stats](http://issuestats.com/github/Trustpilot/badge/badge/pr)](http://issuestats.com/github/Trustpilot/Trustpilot.FSharp.Flow)
 
 # Flow
-A library for something good.
+A library for building explicit execution flows
 
 * A new more explicit version of Choice called Result
 * A Flow type that is an alias of Async\<Result\>

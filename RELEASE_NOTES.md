@@ -1,3 +1,6 @@
+### 0.4.1 - Minor update to logging
+* prefixName -> prefixGroupName, and now puts a dot between prefix and the name
+
 ### 0.4 - Moved Api library
 * Api library has been moved to Trustpilot.FSharp.Flow.Api
 

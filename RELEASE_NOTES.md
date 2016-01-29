@@ -1,3 +1,6 @@
+### 0.4.2 - Add Excution onSuccess
+* Add onSuccess function to execution
+
 ### 0.4.1 - Minor update to logging
 * prefixName -> prefixGroupName, and now puts a dot between prefix and the name
 

@@ -30,3 +30,12 @@ module Execution =
                 do! action { Input = e.Input; RunningTime = e.RunningTime; Output = f } 
             return e
         }
+
+    let onSuccess (action : Execution<'input, 'output> -> Async<unit>)  (exe : ExecutionFlow<'input, 'output,_>) =   
+        async {
+            let! e = exe
+            match e.Output with
+            | Success s -> do! action { Input = e.Input; RunningTime = e.RunningTime; Output = s } 
+            | Failure _ ->()                
+            return e
+        }

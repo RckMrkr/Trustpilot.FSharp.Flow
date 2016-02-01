@@ -1,3 +1,6 @@
+### 0.4.3 - Remove logging level concept
+* Remove the idea of a logging level and make it specific to the implementation
+
 ### 0.4.2 - Add Excution onSuccess
 * Add onSuccess function to execution
 

@@ -7,10 +7,8 @@ module Logger =
             { Name  : string
               Value : string }
 
-        type PropertyLogger =
-            { LogError : List<Property> -> Async<unit>
-              LogInfo  : List<Property> -> Async<unit> }
-    
+        type PropertyLogger = List<Property> -> Async<unit>
+
         type IConvertToProperties = 
             abstract member Properties : List<Property>
 
@@ -77,6 +75,19 @@ module Logger =
         open Execution
         open AppFlow
         open Types
+        
+        type AppLogger =
+            { RequestErrorLogger   : PropertyLogger
+              StoreErrorLogger     : PropertyLogger
+              UnhandledErrorLogger : PropertyLogger
+              BusinessErrorLogger  : PropertyLogger }
+        
+        let inline logSelector (logger : AppLogger) (error) : PropertyLogger =
+            match error with
+            | BusinessError   _ -> logger.BusinessErrorLogger 
+            | RequestError    _ -> logger.RequestErrorLogger 
+            | StoreError      _ -> logger.StoreErrorLogger
+            | UnhandledError  _ -> logger.UnhandledErrorLogger
 
         let inline appErrorToProperties (error : AppError<#IConvertToProperties>) : List<Property> =
             match error with

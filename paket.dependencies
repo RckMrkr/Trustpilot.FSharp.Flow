@@ -1,6 +1,6 @@
 source https://nuget.org/api/v2
 
-nuget Newtonsoft.Json ~> 7
+nuget Newtonsoft.Json ~> 6
 
 group Build
   source https://nuget.org/api/v2

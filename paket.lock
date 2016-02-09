@@ -1,7 +1,7 @@
 NUGET
   remote: https://www.nuget.org/api/v2
   specs:
-    Newtonsoft.Json (7.0.1)
+    Newtonsoft.Json (6.0.8)
 
 GROUP Build
 NUGET

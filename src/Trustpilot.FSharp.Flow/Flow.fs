@@ -78,6 +78,12 @@
                 | Choice2Of2 err -> return Failure (Choice2Of2 err)
             }
 
+        let inline pure' a : Flow<_,'error> = async { return Success a }
+
+        let inline bind f ma = flow.Bind(ma,f)
+
+        let inline (>>=) ma f = bind f ma
+
         let catchMap (f : exn -> 'e) (ma : Flow<'a,'e>) : Flow<'a,'e> =
             ma
             |> catch

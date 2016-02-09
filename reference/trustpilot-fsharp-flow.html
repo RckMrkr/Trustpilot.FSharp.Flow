@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Flow - Trustpilot.FSharp.Flow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content="Trustpilot"/>
+
+    <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet"/>
+
+    <link type="text/css" rel="stylesheet" href="/Trustpilot.FSharp.Flow/content/style.css" />
+    <script type="text/javascript" src="/Trustpilot.FSharp.Flow/content/tips.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="http://fsharp.org">fsharp.org</a></li>
+          <li><a href="http://github.com/Trustpilot/Trustpilot.FSharp.Flow">github page</a></li>
+        </ul>
+        <h3 class="muted"><a href="/Trustpilot.FSharp.Flow/index.html">Trustpilot.FSharp.Flow</a></h3>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="span9" id="main">
+          
+
+
+
+<h1>Flow</h1>
+<p>
+  <span>Namespace: Trustpilot.FSharp</span><br />
+</p>
+<div class="xmldoc">
+</div>
+
+<!-- Render nested types and modules, if there are any -->
+  <h2>Nested types and modules</h2>
+  <div>
+      <table class="table table-bordered type-list">
+    <thead>
+      <tr><td>Type</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="type-name">
+            <a href="trustpilot-fsharp-flow-flowbuilder.html">FlowBuilder</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+  <table class="table table-bordered module-list">
+    <thead>
+      <tr><td>Module</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="module-name">
+            <a href="trustpilot-fsharp-flow-applicative.html">Applicative</a>
+          </td>
+          <td class="xmldoc"></td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+  <h3>Functions and values</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Function or value</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '43', 43)" onmouseover="showTip(event, '43', 43)">
+            ( &gt;&gt;= ) ma f
+          </code>
+          <div class="tip" id="43">
+            <strong>Signature:</strong> ma:Async&lt;Result&lt;&#39;?46994,&#39;?46995&gt;&gt; -&gt; f:(&#39;?46994 -&gt; Async&lt;Result&lt;&#39;?46996,&#39;?46995&gt;&gt;) -&gt; Async&lt;Result&lt;&#39;?46996,&#39;?46995&gt;&gt;<br />
+                          <strong>Type parameters:</strong> '?46994, '?46995, '?46996          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/Trustpilot/Trustpilot.FSharp.Flow/tree/master/src/Trustpilot.FSharp.Flow/Flow.fs#L85-85" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+              <p>CompiledName: <code>op_GreaterGreaterEquals</code></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '44', 44)" onmouseover="showTip(event, '44', 44)">
+            bind f ma
+          </code>
+          <div class="tip" id="44">
+            <strong>Signature:</strong> f:(&#39;?46990 -&gt; Async&lt;Result&lt;&#39;?46991,&#39;?46992&gt;&gt;) -&gt; ma:Async&lt;Result&lt;&#39;?46990,&#39;?46992&gt;&gt; -&gt; Async&lt;Result&lt;&#39;?46991,&#39;?46992&gt;&gt;<br />
+                          <strong>Type parameters:</strong> '?46990, '?46991, '?46992          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/Trustpilot/Trustpilot.FSharp.Flow/tree/master/src/Trustpilot.FSharp.Flow/Flow.fs#L83-83" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '45', 45)" onmouseover="showTip(event, '45', 45)">
+            catch ma
+          </code>
+          <div class="tip" id="45">
+            <strong>Signature:</strong> ma:Flow&lt;&#39;a,&#39;e&gt; -&gt; Flow&lt;&#39;a,Choice&lt;&#39;e,exn&gt;&gt;<br />
+                          <strong>Type parameters:</strong> 'a, 'e          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/Trustpilot/Trustpilot.FSharp.Flow/tree/master/src/Trustpilot.FSharp.Flow/Flow.fs#L72-72" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '46', 46)" onmouseover="showTip(event, '46', 46)">
+            catchMap f ma
+          </code>
+          <div class="tip" id="46">
+            <strong>Signature:</strong> f:(exn -&gt; &#39;e) -&gt; ma:Flow&lt;&#39;a,&#39;e&gt; -&gt; Flow&lt;&#39;a,&#39;e&gt;<br />
+                          <strong>Type parameters:</strong> 'e, 'a          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/Trustpilot/Trustpilot.FSharp.Flow/tree/master/src/Trustpilot.FSharp.Flow/Flow.fs#L87-87" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '47', 47)" onmouseover="showTip(event, '47', 47)">
+            flow 
+          </code>
+          <div class="tip" id="47">
+            <strong>Signature:</strong> FlowBuilder<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/Trustpilot/Trustpilot.FSharp.Flow/tree/master/src/Trustpilot.FSharp.Flow/Flow.fs#L58-58" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '48', 48)" onmouseover="showTip(event, '48', 48)">
+            fromAsyncChoice ma
+          </code>
+          <div class="tip" id="48">
+            <strong>Signature:</strong> ma:Async&lt;Choice&lt;&#39;a,&#39;e&gt;&gt; -&gt; Flow&lt;&#39;a,&#39;e&gt;<br />
+                          <strong>Type parameters:</strong> 'a, 'e          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/Trustpilot/Trustpilot.FSharp.Flow/tree/master/src/Trustpilot.FSharp.Flow/Flow.fs#L98-98" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '49', 49)" onmouseover="showTip(event, '49', 49)">
+            fromBool failWith failOn
+          </code>
+          <div class="tip" id="49">
+            <strong>Signature:</strong> failWith:&#39;err -&gt; failOn:bool -&gt; Flow&lt;unit,&#39;err&gt;<br />
+                          <strong>Type parameters:</strong> 'err          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/Trustpilot/Trustpilot.FSharp.Flow/tree/master/src/Trustpilot.FSharp.Flow/Flow.fs#L106-106" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '50', 50)" onmouseover="showTip(event, '50', 50)">
+            fromOption err opt
+          </code>
+          <div class="tip" id="50">
+            <strong>Signature:</strong> err:&#39;e -&gt; opt:Option&lt;&#39;r&gt; -&gt; Flow&lt;&#39;r,&#39;e&gt;<br />
+                          <strong>Type parameters:</strong> 'e, 'r          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/Trustpilot/Trustpilot.FSharp.Flow/tree/master/src/Trustpilot.FSharp.Flow/Flow.fs#L101-101" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '51', 51)" onmouseover="showTip(event, '51', 51)">
+            map f x
+          </code>
+          <div class="tip" id="51">
+            <strong>Signature:</strong> f:(&#39;a -&gt; &#39;r) -&gt; x:Flow&lt;&#39;a,&#39;b&gt; -&gt; Flow&lt;&#39;r,&#39;b&gt;<br />
+                          <strong>Type parameters:</strong> 'a, 'r, 'b          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/Trustpilot/Trustpilot.FSharp.Flow/tree/master/src/Trustpilot.FSharp.Flow/Flow.fs#L60-60" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '52', 52)" onmouseover="showTip(event, '52', 52)">
+            mapFailure f x
+          </code>
+          <div class="tip" id="52">
+            <strong>Signature:</strong> f:(&#39;b -&gt; &#39;r) -&gt; x:Flow&lt;&#39;a,&#39;b&gt; -&gt; Flow&lt;&#39;a,&#39;r&gt;<br />
+                          <strong>Type parameters:</strong> 'b, 'r, 'a          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/Trustpilot/Trustpilot.FSharp.Flow/tree/master/src/Trustpilot.FSharp.Flow/Flow.fs#L66-66" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '53', 53)" onmouseover="showTip(event, '53', 53)">
+            pure&#39; a
+          </code>
+          <div class="tip" id="53">
+            <strong>Signature:</strong> a:&#39;?46987 -&gt; Flow&lt;&#39;?46987,&#39;error&gt;<br />
+                          <strong>Type parameters:</strong> '?46987, 'error          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/Trustpilot/Trustpilot.FSharp.Flow/tree/master/src/Trustpilot.FSharp.Flow/Flow.fs#L81-81" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '54', 54)" onmouseover="showTip(event, '54', 54)">
+            startChild ma
+          </code>
+          <div class="tip" id="54">
+            <strong>Signature:</strong> ma:Flow&lt;&#39;r,&#39;e&gt; -&gt; Flow&lt;Flow&lt;&#39;r,&#39;e&gt;,&#39;e&gt;<br />
+                          <strong>Type parameters:</strong> 'r, 'e          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/Trustpilot/Trustpilot.FSharp.Flow/tree/master/src/Trustpilot.FSharp.Flow/Flow.fs#L92-92" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+        </div>
+        <div class="span3">
+          <img src="/Trustpilot.FSharp.Flow/img/logo.png" alt="F# Project" style="width:150px;margin:10px" />  
+          <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+            <li class="nav-header">Trustpilot.FSharp.Flow</li>
+            <li><a href="/Trustpilot.FSharp.Flow/index.html">Home page</a></li>
+            <li class="divider"></li>
+            <li><a href="http://nuget.org/packages/Trustpilot.FSharp.Flow">Get Library via NuGet</a></li>
+            <li><a href="http://github.com/Trustpilot/Trustpilot.FSharp.Flow">Source Code on GitHub</a></li>
+            <li><a href="/Trustpilot.FSharp.Flow/license.html">License</a></li>
+            <li><a href="/Trustpilot.FSharp.Flow/release-notes.html">Release Notes</a></li>
+            
+            <li class="nav-header">Getting started</li>
+            <li><a href="/Trustpilot.FSharp.Flow/tutorial.html">Sample tutorial</a></li>
+
+            <li class="nav-header">Documentation</li>
+            <li><a href="/Trustpilot.FSharp.Flow/reference/index.html">API Reference</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a href="http://github.com/Trustpilot/Trustpilot.FSharp.Flow"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"/></a>
+  </body>
+  </html>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Namespaces - Trustpilot.FSharp.Flow</title>
+    <title>App - Trustpilot.FSharp.Flow</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content=""/>
     <meta name="author" content="Trustpilot"/>
@@ -33,11 +33,19 @@
         <div class="span9" id="main">
           
 
-<h1>Trustpilot.FSharp.Flow</h1>
 
 
-  <h2>Trustpilot.FSharp Namespace</h2>
-    <div>
+<h1>App</h1>
+<p>
+  <span>Namespace: Trustpilot.FSharp</span><br />
+  <span>Parent Module: <a href="trustpilot-fsharp-logger.html">Logger</a></span>
+</p>
+<div class="xmldoc">
+</div>
+
+<!-- Render nested types and modules, if there are any -->
+  <h2>Nested types and modules</h2>
+  <div>
       <table class="table table-bordered type-list">
     <thead>
       <tr><td>Type</td><td>Description</td></tr>
@@ -45,63 +53,77 @@
     <tbody>
         <tr>
           <td class="type-name">
-            <a href="trustpilot-fsharp-flow-2.html">Flow<'a, 'e></a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="trustpilot-fsharp-result-2.html">Result<'success, 'failure></a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-    </tbody>
-  </table>
-  <table class="table table-bordered module-list">
-    <thead>
-      <tr><td>Module</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td class="module-name">
-            <a href="trustpilot-fsharp-appflow.html">AppFlow</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-        <tr>
-          <td class="module-name">
-            <a href="trustpilot-fsharp-common.html">Common</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-        <tr>
-          <td class="module-name">
-            <a href="trustpilot-fsharp-execution.html">Execution</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-        <tr>
-          <td class="module-name">
-            <a href="trustpilot-fsharp-flow.html">Flow</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-        <tr>
-          <td class="module-name">
-            <a href="trustpilot-fsharp-logger.html">Logger</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-        <tr>
-          <td class="module-name">
-            <a href="trustpilot-fsharp-result.html">Result</a>
+            <a href="trustpilot-fsharp-logger-app-applogger.html">AppLogger</a>
           </td>
           <td class="xmldoc"></td>
         </tr>
     </tbody>
   </table>
 
-    </div>
+  </div>
+
+  <h3>Functions and values</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Function or value</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '58', 58)" onmouseover="showTip(event, '58', 58)">
+            appErrorToProperties error
+          </code>
+          <div class="tip" id="58">
+            <strong>Signature:</strong> error:AppError&lt;&#39;?46938&gt; -&gt; List&lt;Property&gt;<br />
+                          <strong>Type parameters:</strong> '?46938          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/Trustpilot/Trustpilot.FSharp.Flow/tree/master/src/Trustpilot.FSharp.Flow/Logger.fs#L92-92" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '59', 59)" onmouseover="showTip(event, '59', 59)">
+            executionAppToProperties e
+          </code>
+          <div class="tip" id="59">
+            <strong>Signature:</strong> e:Execution&lt;&#39;?46940,AppError&lt;&#39;?46941&gt;&gt; -&gt; List&lt;Property&gt;<br />
+                          <strong>Type parameters:</strong> '?46940, '?46941          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/Trustpilot/Trustpilot.FSharp.Flow/tree/master/src/Trustpilot.FSharp.Flow/Logger.fs#L109-109" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '60', 60)" onmouseover="showTip(event, '60', 60)">
+            logSelector logger error
+          </code>
+          <div class="tip" id="60">
+            <strong>Signature:</strong> logger:AppLogger -&gt; error:AppError&lt;&#39;?46936&gt; -&gt; PropertyLogger<br />
+                          <strong>Type parameters:</strong> '?46936          </div>
+        </td>
+        <td class="xmldoc">
+            <a href="http://github.com/Trustpilot/Trustpilot.FSharp.Flow/tree/master/src/Trustpilot.FSharp.Flow/Logger.fs#L85-85" class="github-link">
+              <img src="../content/img/github.png" class="normal" />
+              <img src="../content/img/github-blue.png" class="hover" />
+            </a>
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
         </div>
         <div class="span3">

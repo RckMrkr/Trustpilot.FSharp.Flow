@@ -1,3 +1,6 @@
+### 0.4.4 - Lower newtonsoft version requirement
+* Newtonsoft 7 -> 6
+
 ### 0.4.3 - Remove logging level concept
 * Remove the idea of a logging level and make it specific to the implementation
 
